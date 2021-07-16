@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div class="footer"></div>
+</template>
 
 <script>
 export default {
@@ -7,4 +9,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/style/common.scss";
 </style>
