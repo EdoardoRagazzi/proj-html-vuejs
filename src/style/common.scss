@@ -1,9 +1,13 @@
 @import 'bootstrap';
-  
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import '~bootstrap/scss/bootstrap.scss';
 
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
