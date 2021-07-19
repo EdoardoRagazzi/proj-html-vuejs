@@ -89,8 +89,9 @@ b-navbar {
   }
 }
 .button {
-  line-height: 50px;
-  height: 100px;
+  line-height: 20px;
+  height: 70px;
+  max-width: 250px;
   text-align: center;
   vertical-align: middle;
   border: 0px;
@@ -101,11 +102,13 @@ b-navbar {
   margin-left: 20px;
   letter-spacing: 0.5px;
   color: #fff;
+  cursor: pointer;
   transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
   &:hover {
     background-color: white;
-    color: rgb(15, 13, 13);
+    cursor: pointer;
+
     a.nav-link {
       color: red;
     }
