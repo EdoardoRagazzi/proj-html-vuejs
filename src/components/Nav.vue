@@ -63,8 +63,8 @@ export default {
   z-index: 999;
 }
 img {
-  height: 80px;
-  width: 300px;
+  height: 60px;
+  max-width: 270px;
 }
 b-navbar {
   height: 115px;

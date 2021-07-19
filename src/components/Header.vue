@@ -94,11 +94,9 @@
           >
         </h1>
       </b-carousel-slide>
-
+      <Jumbotron />
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
     </b-carousel>
-
-    <Jumbotron />
   </div>
 </template>
 
@@ -130,6 +128,7 @@ export default {
 
 <style scoped lang="scss">
 @import "@/style/common.scss";
+
 .sr-only {
   font-size: 0.2px;
   display: none;
@@ -139,14 +138,14 @@ export default {
   top: 0;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: 
     /* top, transparent red, faked with gradient */ linear-gradient(
     #dc6d6d,
     #dc6d6d
   );
-  z-index: 1000;
+
   img {
     opacity: 0.1;
   }
