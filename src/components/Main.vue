@@ -9,6 +9,12 @@
     <div class="secondslide">
       <Secondslide />
     </div>
+    <div class="courses">
+      <Courses />
+    </div>
+    <div class="thirdslide">
+      <Thirdslide />
+    </div>
   </div>
 </template>
 
@@ -16,12 +22,16 @@
 import Firstslide from "@/components/Firstslide.vue";
 import Tab from "@/components/Tab.vue";
 import Secondslide from "@/components/Secondslide.vue";
+import Courses from "@/components/Courses.vue";
+import Thirdslide from "@/components/Thirdslide.vue";
 export default {
   name: "Main",
   components: {
     Firstslide,
     Tab,
     Secondslide,
+    Courses,
+    Thirdslide,
   },
 };
 </script>
