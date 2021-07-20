@@ -2,7 +2,6 @@
   <div class="header">
     <b-carousel
       id="carousel-1"
-      v-model="slide"
       :interval="10000"
       controls
       indicators
@@ -10,6 +9,7 @@
       img-width="1024"
       style="text-shadow: 1px 1px 2px #333"
     >
+      <!-- v-model="slide" -->
       <Nav />
       <!-- Text slides with image -->
 

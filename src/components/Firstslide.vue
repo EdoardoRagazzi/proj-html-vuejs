@@ -21,14 +21,8 @@
 </template>
 
 <script>
-import Card from "../data/Card.js";
 export default {
   name: "Firstslide",
-  data() {
-    return {
-      navs: Card,
-    };
-  },
 };
 </script>
 
