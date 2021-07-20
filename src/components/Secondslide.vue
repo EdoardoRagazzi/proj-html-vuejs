@@ -58,36 +58,53 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Coaching Session</h5>
+              <div class="card-date">
+                <i class="bi bi-calendar3"></i>24 Mar 18:00 PM
+              </div>
               <p class="card-text">
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary"
+                ><i class="bi bi-plus-lg"></i>Find More</a
+              >
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Coaching Session</h5>
+              <div class="card-date">
+                <i class="bi bi-calendar3"></i>24 Mar 18:00 PM
+              </div>
               <p class="card-text">
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary"
+                ><i class="bi bi-plus-lg"></i>Find More</a
+              >
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Coaching Session</h5>
-              <div class="card-date"></div>
+              <div class="card-date">
+                <i class="bi bi-calendar3"></i>24 Mar 18:00 PM
+              </div>
               <p class="card-text">
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary"
+                ><i class="bi bi-plus-lg"></i>Find More</a
+              >
             </div>
           </div>
         </div>
       </div>
+      <b-button class="btnsearch" pill>
+        <i class="bi bi-search"></i> View all Events
+      </b-button>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -112,10 +129,13 @@ export default {
 @import "@/style/common.scss";
 .tabs {
   background-color: #e56768;
-  height: 1500px;
+  height: 1400px;
   width: 100%;
 }
-
+.card-date {
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
 .cell {
   display: flex;
   justify-content: center;
@@ -124,14 +144,49 @@ export default {
     border-radius: 25px;
     max-width: 350px;
     max-height: 200px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     p {
       color: $gray-600;
     }
     .btn {
-      margin-top: 20px;
+      margin-top: 40px;
+      height: 50px;
+      border-radius: 25px;
+
+      vertical-align: middle;
+      padding: 16px 43px !important;
+      background-color: #e56768;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      border: 0px;
+      &:hover {
+        background-color: #e9d758;
+      }
     }
   }
 }
+.btnsearch {
+  margin-top: 150px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  border: 0px;
+  background: #e9d758;
+  padding: 16px 43px !important;
+  border-radius: 50px;
+  text-transform: uppercase !important;
+  margin-left: 20px;
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: #e9d758;
+  color: #fff;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  &:hover {
+    background-color: #e56768;
+  }
+}
+
 .universitytab,
 .eventstab {
   img {
