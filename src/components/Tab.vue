@@ -15,7 +15,8 @@
         @click="changeUtente(index)"
       >
         <img :src="iconSrc(item.image)" alt="" />
-        <span>{{ item.text }}</span>
+        <div class="text">{{ item.text }}</div>
+        <div class="arrow-down"></div>
       </div>
     </div>
     <div class="showtab d-flex justify-content-center">
@@ -58,39 +59,58 @@ export default {
 <style scoped lang="scss">
 @import "@/style/common.scss";
 .tabs {
+  height: 250px;
   border-bottom: 1px solid grey;
   border-top: 1px solid grey;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #e56768;
+  margin-top: 60px;
+  display: none;
+}
+
 .tab {
   width: 100%;
   height: 100%;
 
   .nav {
-    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
     text-align: center;
     border: 1px solid grey;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    span {
+    box-shadow: 0 4px 8px 0 #8d898933, 0 6px 20px 0 #8d898933;
+    .text {
+      width: 250px;
+      display: block;
       font-family: "Fredoka One";
       color: #e56768;
     }
     &:hover {
       cursor: pointer;
       background-color: #e56768;
+      .arrow-down {
+        display: block;
+      }
 
       img,
-      span {
+      .text {
         -webkit-filter: brightness(0) invert(1);
         filter: brightness(0) invert(1);
+        display: block;
       }
     }
   }
 }
 
 img {
-  padding-top: 20px;
+  margin-top: 40px;
   height: 100px;
   width: 150px;
   margin-bottom: 20px;

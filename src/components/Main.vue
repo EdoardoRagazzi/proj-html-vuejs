@@ -3,8 +3,11 @@
     <div class="firstslide">
       <Firstslide class="slide" />
     </div>
-    <div>
+    <div class="tab">
       <Tab />
+    </div>
+    <div class="secondslide">
+      <Secondslide />
     </div>
   </div>
 </template>
@@ -12,11 +15,13 @@
 <script>
 import Firstslide from "@/components/Firstslide.vue";
 import Tab from "@/components/Tab.vue";
+import Secondslide from "@/components/Secondslide.vue";
 export default {
   name: "Main",
   components: {
     Firstslide,
     Tab,
+    Secondslide,
   },
 };
 </script>
@@ -27,6 +32,7 @@ export default {
 .main {
   height: 100%;
 }
+
 .firstslide {
   height: 500px;
   margin-top: 50px;

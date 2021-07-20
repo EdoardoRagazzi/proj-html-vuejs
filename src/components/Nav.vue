@@ -79,13 +79,15 @@ b-navbar {
     color: white;
   }
 }
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
+}
 .drop {
   font-weight: 900;
-  #__BVID__7__BV_toggle_ {
-    color: white;
-    span {
-      color: white;
-    }
+
+  color: white;
+  span {
+    color: white !important;
   }
 }
 .button {
