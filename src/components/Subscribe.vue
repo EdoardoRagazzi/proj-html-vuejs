@@ -80,15 +80,35 @@
     </div>
     <div class="carousel">
       <h1>Thoughts from our students</h1>
-      <hooper>
-        <slide> slide 1 </slide>
-        <slide> slide 2 </slide>
-      </hooper>
+      <div class="carouselslide">
+        <hooper :itemsToShow="2" style="height: 400px">
+          <slide v-for="(item, index) in navs" :key="index">
+            <div class="card m-3" style="max-width: 30rem">
+              <div
+                class="card-header bg-transparent border-success text-danger"
+              >
+                <img :src="iconSrc(item.postimage)" alt="" /> {{ item.text }}
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+                  {{ item.context }}
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-success">
+                <img :src="iconSrc(item.image)" alt="" />
+                {{ item.text }}
+              </div>
+            </div>
+          </slide>
+        </hooper>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Card from "../data/Card.js";
 import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 export default {
@@ -96,6 +116,16 @@ export default {
   components: {
     Hooper,
     Slide,
+  },
+  data() {
+    return {
+      navs: Card,
+    };
+  },
+  methods: {
+    iconSrc(icon) {
+      return require("../assets/" + icon);
+    },
   },
 };
 </script>
@@ -222,5 +252,19 @@ export default {
   font-weight: 600;
   font-size: 30px;
   color: #3d404f;
+  .carouselslide {
+    padding: 20px;
+    height: 80%;
+    width: 60%;
+    margin: auto;
+    img {
+      height: 100px;
+      width: 100px;
+      float: left;
+    }
+    .card-text {
+      font-size: 10px;
+    }
+  }
 }
 </style>
