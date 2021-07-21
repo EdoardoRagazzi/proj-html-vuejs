@@ -17,7 +17,6 @@ export default {
 .wave {
   position: absolute;
   bottom: 0;
-  z-index: 1000;
 
   img {
     color: white;
