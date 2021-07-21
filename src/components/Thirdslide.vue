@@ -94,6 +94,7 @@ export default {
 
 <style scoped lang="scss">
 @import "@/style/common.scss";
+
 .picturecard {
   width: 100%;
   float: left;
@@ -102,6 +103,13 @@ export default {
   .card {
     margin: 30px;
     box-shadow: 0 4px 8px 0 #8d898933, 0 6px 20px 0 #8d898933;
+    img {
+      transition: transform 0.8s;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
     .btn {
       max-width: 100px;
       float: right;
@@ -131,8 +139,11 @@ export default {
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 100px;
+  height: 1500px;
+  width: 1350px;
 }
 .slide {
+  width: 100%;
   .btn {
     margin-top: 20px;
     max-width: 300px;

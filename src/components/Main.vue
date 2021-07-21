@@ -15,10 +15,14 @@
     <div class="thirdslide">
       <Thirdslide />
     </div>
+    <div class="subscribe">
+      <Subscribe />
+    </div>
   </div>
 </template>
 
 <script>
+import Subscribe from "@/components/Subscribe.vue";
 import Firstslide from "@/components/Firstslide.vue";
 import Tab from "@/components/Tab.vue";
 import Secondslide from "@/components/Secondslide.vue";
@@ -32,6 +36,7 @@ export default {
     Secondslide,
     Courses,
     Thirdslide,
+    Subscribe,
   },
 };
 </script>
